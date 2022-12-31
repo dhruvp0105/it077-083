@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './ParentLogin.css';
 import { NavLink } from 'react-router-dom';
-
-export const ParentLogin = () => {
+export const HospitalLogin = () => {
   return (
-    <div className='card1'>
+    <div>
+        <div className='card1'>
     <center>
-    <h1>Parent Login</h1>
+    <h1>Hospital Login</h1>
     </center>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -28,9 +28,9 @@ export const ParentLogin = () => {
       </Button>
       <br></br>
       <br></br>
-      <NavLink to="/ParentReg">New User ? SignUp</NavLink>
+      <NavLink to="/HospitalReg">New User ? SignUp </NavLink>
     </Form>
+    </div>
     </div>
   )
 }
-

@@ -7,11 +7,11 @@ export const ParentReg = () => {
     return (
         <div>
             <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <div className="card">
+                {/* <div className="row"> */}
+                    {/* <div className="col-md-6"> */}
+                        <div className="card2">
                             <div className="text-center">
-                                <h1>Registration</h1>
+                                <h1> Parent Registration</h1>
                             </div>
                             <form>
                                 <div className="mb-3">
@@ -21,7 +21,7 @@ export const ParentReg = () => {
                                 <div className="mb-3">
                                     <label className="form-label">Mobile Number</label>
                                     <input type="tel" className="form-control" id="name2" aria-describedby="name2"
-                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></input>
+                                        pattern="[0-9]{10}" required></input>
                                 </div>
                                 <div className="mb-3">
                                     <label for="exampleInputEmail1" className="form-label">Email address</label>
@@ -39,8 +39,8 @@ export const ParentReg = () => {
                                     <NavLink to="/ParentLogin">Already Member ? Click to Login !</NavLink>
                                     </div>
                         </div>
-                    </div>
-                </div>
+                    {/* </div> */}
+                {/* </div> */}
             </div>
             );
 }

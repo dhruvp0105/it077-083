@@ -1,6 +1,7 @@
 .card1 {
     margin-top: 50px;
-    border: 2px solid rgb(21, 255, 0);
+    border: 2px solid rgb(14, 33, 201);
+    border-radius: 10px;
     width: 550px;
     padding: 50px;
     position: absolute;

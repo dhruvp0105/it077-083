@@ -1,4 +1,5 @@
 import React from 'react'
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 // import Container from 'react-bootstrap/Container';
 // import Nav from 'react-bootstrap/Nav';
 // import Navbar from 'react-bootstrap/Navbar';
@@ -6,30 +7,26 @@ import React from 'react'
 // import Button from 'react-bootstrap/Button';
 // import { Navigate, NavLink } from 'react-router-dom';
 // import { ParentLogin } from './ParentLogin';
-import { NavLink } from "react-router-dom";
+import "./Header.css";
+import { NavLink  } from "react-router-dom";
 export const Header = () => {
-    return (
+  return (
+    <div>
+    
+      <div className="topnav">
+        <div className="topnav-left">
         
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <NavLink className="nav-link" to="/">CVS</NavLink>
-      
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-              <NavLink className="nav-link" to="/">Home</NavLink>
-            </li>
-            <li className="nav-item active">
-              <NavLink className="nav-link" to="/Login">Login</NavLink>
-            </li>
-            {/* <li className="nav-item">
-              <NavLink className="nav-link" to="/parentReg">SignUp</NavLink>
-            </li> */}
-       
-          </ul>
-         
+          <NavLink  to="/">Home</NavLink>
+          <NavLink  to="/Contact">Contact</NavLink>
         </div>
-      </nav>
-        
-    )
+        {/* <NavLink className="active" to="/">Home</NavLink>
+        <NavLink to="/Home">Contact</NavLink> */}
+        <div className="topnav-right">
+          <NavLink to="/">Search</NavLink>
+          <NavLink to="/Login">Login</NavLink>
+        </div>
+      </div>
+    </div>
+  )
 }
 

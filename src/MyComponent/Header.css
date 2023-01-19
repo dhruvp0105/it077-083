@@ -1,0 +1,36 @@
+.topnav {
+    background-color:rgb(225, 248, 189);
+    overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #920606;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* .topnav a:hover {
+  background-color: rgb(243, 236, 236);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #1fdc97;
+  color: white;
+} */
+
+.topnav-right {
+    float: right;
+    background-color:rgb(255, 252, 165);
+    border-radius: 20px;
+  }
+
+  .topnav-left {
+    float: left;
+    background-color:rgb(255,252,165);
+    border-radius: 20px;
+  }
+

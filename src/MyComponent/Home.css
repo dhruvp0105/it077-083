@@ -1,0 +1,39 @@
+.Image{
+    min-width: 100%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.def
+{
+    background-color: rgb(245, 245, 245);
+    max-height: 100%;
+}
+
+.schedule{
+    padding-left: 5%;
+    padding-top: 5%;
+    background-color: rgb(255, 255, 255);
+}
+.Book_Appointment{
+    padding-left: 5%;
+    padding-top: 5%;
+    background-color: rgb(255, 255, 255);
+}
+.Tracking{
+    padding-left: 5%;
+    padding-top: 5%;
+    background-color: rgb(255, 255, 255);
+}
+.heading{
+    text-align: center;
+}
+
+.b{
+    border-radius: 10px;
+    border-color: azure;
+}
+

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const Contact = () => {
+    
     const Wrapper = styled.section`
     padding: 3rem 0 5rem 0;
     .container {
@@ -29,6 +30,7 @@ export const Contact = () => {
 
     return (
         <Wrapper>
+        <style>{'body { background-color:#e6fff5; }'}</style>
             <center><h2 className="common-heading">Feel Free to Contact us</h2></center>
             <br>
             </br>
@@ -63,7 +65,7 @@ export const Contact = () => {
                             autoComplete="off"
                             required></textarea>
 
-                        <input type="submit" value="send" />
+                        <input type="submit" value="send" style={{backgroundColor:"blue",color:"white"}} />
                     </form>
                 </div>
             </div>

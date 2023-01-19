@@ -6,6 +6,9 @@ import { Navigate, NavLink } from 'react-router-dom';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+import { GoogleLogin } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
+
 export const ParentLogin = () => {
   const navigate = useNavigate()
   const [user, setUser] = useState({
@@ -19,14 +22,24 @@ export const ParentLogin = () => {
 
     setUser({ ...user, [name]: value });
   }
-  const handleClick = () => navigate('/parentinfo');
+  /* navigate('/ParentLogin'); */
   const login = (e) => {
     e.preventDefault();
     axios.post("http://localhost:9000/ParentLogin", user)
-      .then(res => { alert(res.data.message);
-      if(res.data.message!=="Password didn't match"){
-        handleClick();
-      }
+      .then(res => {
+        alert(res.data.message);
+        if (res.data.message === "Password didn't match") {
+
+          navigate('/ParentLogin');
+
+        }
+        else if (res.data.message === "User Not registered") {
+          navigate("/ParentReg")
+        }
+        else {
+          console.log("hi")
+          navigate('/parentinfo')
+        }
       })
   }
   return (
@@ -48,11 +61,23 @@ export const ParentLogin = () => {
           <Form.Control type="password" name="password" value={user.password} onChange={handleInputs} placeholder="Password" />
         </Form.Group>
         <Button type="submit" onClick={login}>
-          <button  style={{ color: "white" }}>
-            Submit
-          </button>
+          Submit
         </Button>
         <br></br>
+        <br></br>
+        <GoogleLogin
+          onSuccess={(credentialResponse) => {
+            console.log(credentialResponse);
+            var decoded = jwt_decode(credentialResponse.credential);
+            console.log(decoded);
+            // <ChildInfo/>
+          }}
+          onError={() => {
+            console.log("Login Failed");
+          }}
+        />
+
+
         <br></br>
         <NavLink to="/ParentReg">New User ? SignUp</NavLink>
       </Form>

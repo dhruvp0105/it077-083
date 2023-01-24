@@ -6,9 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
-
-
-// mongodb://127.0.0.1:27017/myLoginRegisterDB
+    
 
 mongoose.connect("mongodb+srv://dhruv:dhruv@cluster0.eav5fip.mongodb.net/Child_Vaccination?retryWrites=true&w=majority" , {
     useNewUrlParser: true,
@@ -42,7 +40,7 @@ app.post("/ParentLogin", (req, res) => {
         if(user){
             if(password === user.password)
             {
-                res.send({message:"Login Successfully...",user:user})
+                res.send({message:"Login Successfull",user:user})
             }
             else{
                 res.send({message:"Password didn't match"})

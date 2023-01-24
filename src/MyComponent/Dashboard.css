@@ -1,0 +1,23 @@
+.main
+{
+	float: left;
+	width: 1085px;
+	height: 577px;
+	top: 67px;
+	left: 408px;
+	position: absolute;
+	background-color: #81817f;
+
+}
+ li{
+	 text-decoration: none;
+	 list-style:none
+ }
+ /* .div5{
+    padding-top:50px;
+    padding-right: 50px;
+    height: 650px;
+    width: 300px;
+    background-color: aqua;
+	position:fixed;
+ } */

@@ -1,14 +1,20 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-
+import { Button, Navbar } from 'react-bootstrap';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Dashboard from './Dashboard';
+import './Parentinfo.css';
 export const ParentInfo = () => {
+    const navigate=useNavigate();
+    function handleInput(event)
+    {
+        navigate('/ChildInfo');
+    }
     return (
         // <div style={{marginTop:"200px"}} > hello</div>
-        <div>ParentInfo
+        <div className='card4'>
          <br></br>
          <br></br>
-            <Button type="">
+            {/* <Button type="Button">
                 <NavLink to="/childinfo" style={{ color: "white" }}>
                     Add Child Info
                 </NavLink>
@@ -47,7 +53,15 @@ export const ParentInfo = () => {
                 <NavLink to="/parentinfo" style={{ color: "white" }}>
                     My Profile
                 </NavLink>
-            </Button>
+            </Button> */}
+             <center>
+            <input class="btn btn-primary" type="button" onClick={handleInput} value="Add Child info"></input><br></br><br></br>
+            <input class="btn btn-primary" type="button" value="View Child info"></input><br></br><br></br>
+            <input class="btn btn-primary" type="button" value="My reminder"></input><br></br><br></br>
+            <input class="btn btn-primary" type="button" value="Book Appointment"></input><br></br><br></br>
+            <input class="btn btn-primary" type="button" value="My Appointment"></input><br></br><br></br>
+            <input class="btn btn-primary" type="button" value="My profile"></input><br></br><br></br>
+            </center>
         </div>
     )
 }

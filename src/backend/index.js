@@ -33,7 +33,7 @@ const User = new mongoose.model("User", userSchema)
 
 
 app.listen(9000, () => {
-    console.log("Port 9000");
+    console.log("Port 3000");
 })
 
 app.post("/ParentLogin", (req, res) => {

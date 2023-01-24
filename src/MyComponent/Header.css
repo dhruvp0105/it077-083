@@ -1,13 +1,13 @@
 .topnav {
-    background-color:rgb(225, 248, 189);
+    background-color:rgb(138, 128, 128);
     overflow: hidden;
 }
 
 .topnav a {
   float: left;
-  color: #920606;
+  color: #960505;
   text-align: center;
-  padding: 14px 16px;
+  padding: 22px 20px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -24,13 +24,16 @@
 
 .topnav-right {
     float: right;
-    background-color:rgb(255, 252, 165);
-    border-radius: 20px;
+    background-color:rgb(255,252,165);
+    /* border-radius: 5px; */
   }
 
   .topnav-left {
     float: left;
     background-color:rgb(255,252,165);
-    border-radius: 20px;
+    /* border-radius: 2px; */
   }
 
+  .head{
+    text-align: center;
+  }

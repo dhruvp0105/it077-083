@@ -1,0 +1,10 @@
+.card3 {
+    margin-top: 2px;
+    border: 0px solid rgb(14, 33, 201);
+    border-radius: 10px;
+    width: 1800px;
+    padding: 20px;
+    position: absolute;
+    top: 10%;
+    left: 32%;
+}

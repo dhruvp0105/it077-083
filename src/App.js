@@ -16,7 +16,9 @@ import { useState } from "react";
 import { Contact } from "./MyComponent/Contact";
 import { useEffect } from "react";
 import { GoogleLogin } from "@react-oauth/google";
-
+// import Dashboard from "./MyComponent/Dashboard";
+// import Seldate from "./MyComponent/Seldate";
+// import { Navbar1 } from "./MyComponent/Navbar1";
 function App() {
   const [user, setLoginUser] = useState({});
   // function handleCallbackResponse(response) {
@@ -61,17 +63,14 @@ function App() {
           <Route exact path="/HospitalReg" element={<HospitalReg />}></Route>
           <Route exact path="/ParentReg" element={<ParentReg />}></Route>
           <Route exact path="/Login" element={<Login />}></Route>
-          <Route exact path="/Contact" element={<Contact />}></Route>
-          <Route
-            exact
-            path="/parentinfo"
-            element={user && user._id ? <ParentLogin /> : <ParentInfo />}
-          >
+          <Route exact path="/parentinfo/*" element={user && user._id ? <ParentLogin /> : <ParentInfo />}>
             {/* {(props)=>user && user._id ? <ParentInfo /> : <ParentLogin />} */}
             {/* {(props)=><ParentInfo />} */}
           </Route>
           <Route exact path="/Contact" element={<Contact />}></Route>
           <Route exact path="/childinfo" element={<ChildInfo />}></Route>
+          {/* <Route exact path="/book_appointment" element={<Seldate/>}></Route> */}
+
         </Routes>
       </Router>
     </div>

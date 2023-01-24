@@ -6,9 +6,9 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
+    
 
-
-mongoose.connect("mongodb://127.0.0.1:27017/myLoginRegisterDB" , {
+mongoose.connect("mongodb+srv://dhruv:dhruv@cluster0.eav5fip.mongodb.net/Child_Vaccination?retryWrites=true&w=majority" , {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, () => {

@@ -5,6 +5,13 @@ import './ParentLogin.css';
 import { Navigate, NavLink } from 'react-router-dom';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+import { useGoogleLogin } from 'react-google-login';
+import { GoogleLogin } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
+import { ChildInfo } from './ChildInfo';
+
+
 
 export const ParentLogin = () => {
   const navigate = useNavigate()
@@ -19,17 +26,30 @@ export const ParentLogin = () => {
 
     setUser({ ...user, [name]: value });
   }
-  const handleClick = () => navigate('/parentinfo');
+  // const handleClick = () => navigate('/parentinfo');
   const login = (e) => {
     e.preventDefault();
     axios.post("http://localhost:9000/ParentLogin", user)
       .then(res => { alert(res.data.message);
-      if(res.data.message!=="Password didn't match"){
-        handleClick();
-      }
+        if (res.data.message === "Password didn't match") {
+
+          navigate('/ParentLogin');
+
+        }
+        else if (res.data.message === "User Not registered") {
+          navigate("/ParentReg")
+        }
+        else {
+          console.log("hi")
+          navigate('/parentinfo')
+        }
       })
   }
+
+  
+
   return (
+   
     <div className='card1'>
       <center>
         <h1>Parent Login</h1>
@@ -48,13 +68,28 @@ export const ParentLogin = () => {
           <Form.Control type="password" name="password" value={user.password} onChange={handleInputs} placeholder="Password" />
         </Form.Group>
         <Button type="submit" onClick={login}>
-          <button  style={{ color: "white" }}>
+          
             Submit
-          </button>
+         
         </Button>
         <br></br>
-        <br></br>
-        <NavLink to="/ParentReg">New User ? SignUp</NavLink>
+        {/* <div id="signInDiv"></div> */}
+        
+        {/* <GoogleLogin
+          onSuccess={(credentialResponse) => {
+            console.log(credentialResponse);
+            var decoded = jwt_decode(credentialResponse.credential);
+            console.log(decoded);
+            // <ChildInfo/>
+          }}
+          onError={() => {
+            console.log("Login Failed");
+          }}
+        /> */}
+          
+          <br></br>
+          <NavLink to="/ParentReg">New User ? SignUp</NavLink>
+          
       </Form>
     </div>
   )

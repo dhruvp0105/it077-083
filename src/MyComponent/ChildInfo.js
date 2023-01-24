@@ -1,4 +1,5 @@
 import React from 'react'
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 export const ChildInfo = () => {
     return (
@@ -23,15 +24,15 @@ export const ChildInfo = () => {
             <br></br>
 
             Gender :
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
-                <label class="form-check-label" for="flexRadioDefault1">
+            <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
+                <label className="form-check-label" for="flexRadioDefault1">
                     Male
                 </label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked></input>
-                <label class="form-check-label" for="flexRadioDefault2">
+            <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked></input>
+                <label className="form-check-label" for="flexRadioDefault2">
                     Female
                 </label>
             </div>
@@ -39,9 +40,24 @@ export const ChildInfo = () => {
             </br>
 
             
+      </div>
+       )
+    }    
+{/* <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+  <a className="navbar-brand" href="#">Navbar</a>
+  <button className="navbar-toggler" type="button" data-bs-toggle="collapse " data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
 
-        </div>
-        
-    )
-}
-
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Link</a>
+      </li>
+      </ul>
+  </div>
+</nav> */}     
+   
